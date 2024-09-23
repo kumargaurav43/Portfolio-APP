@@ -9,6 +9,7 @@ import ProjectsScreen from './screens/ProjectsScreen';
 import { Ionicons } from '@expo/vector-icons';
 import SkillScreen from './screens/SkillScreen';
 import ContactUsScreen from './screens/ContactUsScreen';
+import { CustomDrawerContent } from './components/CustomDrawerContent';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -41,11 +42,47 @@ function TabNavigator() {
 }
 
 // Create Drawer Navigation wrapping the Tab Navigation
+// function DrawerNavigator() {
+//   return (
+//     <Drawer.Navigator initialRouteName="HomeTab" drawerContent={(props) => <CustomDrawerContent {...props}/>}>
+
+//       <Drawer.Screen name="HomeTab" component={TabNavigator} options={{ title: 'Home' }} />
+//       <Drawer.Screen name="About" component={AboutScreen} />
+//       <Drawer.Screen name="Skills" component={SkillScreen} />
+//       <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
+//     </Drawer.Navigator>
+//   );
+// }
+
+
 function DrawerNavigator() {
   return (
-    <Drawer.Navigator initialRouteName="HomeTab">
-      <Drawer.Screen name="HomeTab" component={TabNavigator} options={{ title: 'Home' }} />
+    <Drawer.Navigator
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
+      screenOptions={({ route }) => ({
+        drawerIcon: ({ focused, color, size }) => {
+          let iconName;
+          if (route.name === 'Home') {
+            iconName = focused ? 'home' : 'home-outline';
+          } else if (route.name === 'About') {
+            iconName = focused ? 'information-circle' : 'information-circle-outline';
+          } else if (route.name === 'Projects') {
+            iconName = focused ? 'folder' : 'folder-outline';
+          } else if (route.name === 'Skills') {
+            iconName = focused ? 'school' : 'school-outline';
+          } else if (route.name === 'Contact Us') {
+            iconName = focused ? 'call' : 'call-outline';
+          }
+
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+        drawerActiveTintColor: 'tomato',
+        drawerInactiveTintColor: 'gray',
+      })}
+    >
+      <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="About" component={AboutScreen} />
+      <Drawer.Screen name="Projects" component={ProjectsScreen} />
       <Drawer.Screen name="Skills" component={SkillScreen} />
       <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
     </Drawer.Navigator>

@@ -31,7 +31,7 @@ export default function AboutScreen() {
               <Ionicons name="home-outline" size={24} color="white" style={styles.icon} />
               <Text style={styles.sectionTitle}>Hometown</Text>
               <Text style={styles.text}>
-                I hail from the vibrant city of [Your Hometown], known for its rich culture and technological advancements. 
+                I hail from the vibrant city of Meerut, Uttar Pradesh, known for its rich culture and technological advancements. 
                 Growing up here has instilled in me a deep appreciation for both tradition and innovation, 
                 which reflects in my approach to software development.
               </Text>
@@ -41,7 +41,7 @@ export default function AboutScreen() {
               <Ionicons name="code-slash-outline" size={24} color="white" style={styles.icon} />
               <Text style={styles.sectionTitle}>Skills</Text>
               <View style={styles.skillsContainer}>
-                {['Java', 'ReactJS', 'Spring Boot', 'JavaScript', 'HTML/CSS', 'SQL'].map((skill, index) => (
+                {['Java', 'ReactJS', 'Spring Boot', 'JavaScript', 'HTML/CSS', 'MySQL', 'MongoDB', 'NodeJS', 'GIT', 'GitHub'].map((skill, index) => (
                   <View key={index} style={styles.skillBadge}>
                     <Text style={styles.skillText}>{skill}</Text>
                   </View>
@@ -53,7 +53,7 @@ export default function AboutScreen() {
               <Ionicons name="heart-outline" size={24} color="white" style={styles.icon} />
               <Text style={styles.sectionTitle}>Interests</Text>
               <Text style={styles.text}>
-                Beyond coding, I'm passionate about [Your Interests, e.g., photography, hiking, reading sci-fi novels]. 
+                Beyond coding, I'm passionate about photography, playing badminton, waching sci-fi movies. 
                 I believe in continuous learning and often participate in coding challenges and hackathons 
                 to keep my skills sharp and stay updated with the latest technologies.
               </Text>
