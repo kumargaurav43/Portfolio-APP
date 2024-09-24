@@ -54,7 +54,7 @@ function TabNavigator() {
 //   );
 // }
 
-
+// drawer function which handle the navigation of drawer section
 function DrawerNavigator() {
   return (
     <Drawer.Navigator

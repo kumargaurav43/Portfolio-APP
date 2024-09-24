@@ -30,13 +30,13 @@ export default function HomeScreen() {
                   Passionate about creating innovative solutions and building amazing user experiences.
                 </Text>
               </View>
-
+              {/* about section in home screen */}
               <View style={styles.aboutSection}>
                 <Text style={styles.sectionTitle}>About Me</Text>
                 <Text style={styles.aboutText}>
-                  I'm a dedicated software developer with a strong foundation in computer science. 
-                  My journey in tech began during my Bachelor's in Science and has flourished through 
-                  my Master's in Computer Applications. I specialize in full-stack development, 
+                  I'm a dedicated software developer with a strong foundation in computer science.
+                  My journey in tech began during my Bachelor's in Science and has flourished through
+                  my Master's in Computer Applications. I specialize in full-stack development,
                   with a particular interest in building responsive and user-friendly web and mobile applications.
                 </Text>
               </View>
