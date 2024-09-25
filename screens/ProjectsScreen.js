@@ -6,8 +6,8 @@ const projects = [
     id: '1', 
     title: 'Dermanest - Skin Disease Detection',
     description: 'AI-powered skin disease detection using image recognition.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'TensorFlow', 'Python', 'Flask', 'Keras'],
-    githubUrl: 'https://github.com/yourusername/dermanest',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'TensorFlow', 'Python', 'Flask', 'Keras', 'CNN Model'],
+    githubUrl: 'https://github.com/kumargaurav43',
     liveUrl: 'https://yourliveurl.com/dermanest'
   },
   { 
@@ -29,10 +29,18 @@ const projects = [
   { 
     id: '4', 
     title: 'Calculator',
-    description: 'A personal portfolio website showcasing projects and skills.',
+    description: 'A basic calculator application designed to perform standard arithmetic operations like addition, subtraction, multiplication, and division. Built using HTML, CSS, and JavaScript, this app features a user-friendly interface and responsive design, making it accessible on desktop devices. It is an ideal tool for simple calculations and showcases essential web development skills such as DOM manipulation and event handling.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    githubUrl: 'https://github.com/kumargaurav43/PortFolio/tree/main/Portfolio%20Website',
-    liveUrl: 'https://gauravporfolio.netlify.app'
+    githubUrl: 'https://github.com/kumargaurav43/Calculator',
+    liveUrl: 'https://gauravporfolio.netlify.app/previous%20project/calc/'
+  },
+  { 
+    id: '5', 
+    title: 'Instagram Clone',
+    description: 'This Instagram clone is a web application designed to mimic the core functionalities of the popular social media platform. Built using modern web technologies like HTML, CSS, JavaScript, and React, this project allows users to create accounts, upload photos, view posts, like and comment on posts, and follow other users. The app features a responsive design, ensuring an optimal user experience across various devices.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/kumargaurav43/InstagramClone',
+    liveUrl: 'https://gauravporfolio.netlify.app/previous%20project/instagram%20clone/'
   },
 ];
 
