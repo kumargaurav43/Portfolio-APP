@@ -6,19 +6,34 @@ const ContactUsScreen = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (name === '' || email === '' || message === '') {
       Alert.alert('Error', 'All fields are required!');
       return;
     }
 
-    // Normally, you would handle the form submission here (e.g., send data to a server)
-    Alert.alert('Success', 'Your message has been sent!');
-    
-    // Clear the form fields
-    setName('');
-    setEmail('');
-    setMessage('');
+    try {
+      // Send request to your backend API to trigger the email
+      const response = await fetch('https://your-backend-api.com/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        Alert.alert('Success', 'Your message has been sent! Check your email for confirmation.');
+        // Clear the form fields
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        Alert.alert('Error', 'Failed to send message.');
+      }
+    } catch (error) {
+      Alert.alert('Error', 'Something went wrong!');
+    }
   };
 
   return (
@@ -45,6 +60,14 @@ const ContactUsScreen = () => {
         multiline
       />
       <Button title="Send Message" onPress={handleSubmit} />
+
+      {/* Contact Details Section */}
+      <View style={styles.contactDetails}>
+        <Text style={styles.contactTitle}>Contact Details</Text>
+        <Text>Email: your-email@example.com</Text>
+        <Text>Phone: +1234567890</Text>
+        <Text>Location: Your City, Country</Text>
+      </View>
     </ScrollView>
   );
 };
@@ -71,6 +94,17 @@ const styles = StyleSheet.create({
   messageInput: {
     height: 150,
     textAlignVertical: 'top',
+  },
+  contactDetails: {
+    marginTop: 30,
+    padding: 10,
+    borderTopWidth: 1,
+    borderColor: '#ccc',
+  },
+  contactTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
   },
 });
 

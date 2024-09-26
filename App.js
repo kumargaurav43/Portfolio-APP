@@ -10,6 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import SkillScreen from './screens/SkillScreen';
 import ContactUsScreen from './screens/ContactUsScreen';
 import { CustomDrawerContent } from './components/CustomDrawerContent';
+import TestimonialScreen from './screens/TestimonialScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -72,6 +73,8 @@ function DrawerNavigator() {
             iconName = focused ? 'school' : 'school-outline';
           } else if (route.name === 'Contact Us') {
             iconName = focused ? 'call' : 'call-outline';
+          } else if (route.name === 'testimonial') {
+            iconName = focused ? 'testimonial' : 'testimonial-outline';
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -85,6 +88,7 @@ function DrawerNavigator() {
       <Drawer.Screen name="Projects" component={ProjectsScreen} />
       <Drawer.Screen name="Skills" component={SkillScreen} />
       <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
+      <Drawer.Screen name="Testimonial" component={TestimonialScreen}/>
     </Drawer.Navigator>
   );
 }

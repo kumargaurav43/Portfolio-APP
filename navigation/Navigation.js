@@ -7,6 +7,7 @@ import AboutScreen from '../screens/AboutScreen';
 import ProjectsScreen from '../screens/ProjectsScreen';
 import SkillScreen from '../screens/SkillScreen';
 import ContactUsScreen from '../screens/ContactUsScreen';
+import TestimonialScreen from '../screens/TestimonialScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,7 @@ const Navigation = () => {
         <Stack.Screen name="Projects" component={ProjectsScreen} />
         <Stack.Screen name="Skills" component={SkillScreen}/>
         <Stack.Screen name="Contact Us" component={ContactUsScreen} />
+        <Stack.Screen name="Testimonial" component={TestimonialScreen}>
       </Stack.Navigator>
     </NavigationContainer>
   );
