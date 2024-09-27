@@ -11,6 +11,7 @@ import SkillScreen from './screens/SkillScreen';
 import ContactUsScreen from './screens/ContactUsScreen';
 import { CustomDrawerContent } from './components/CustomDrawerContent';
 import TestimonialScreen from './screens/TestimonialScreen';
+import AchievementsScreen from './screens/AchievementsScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -73,8 +74,10 @@ function DrawerNavigator() {
             iconName = focused ? 'school' : 'school-outline';
           } else if (route.name === 'Contact Us') {
             iconName = focused ? 'call' : 'call-outline';
-          } else if (route.name === 'testimonial') {
-            iconName = focused ? 'testimonial' : 'testimonial-outline';
+          } else if (route.name === 'Testimonial') {
+            iconName = focused ? 'star' : 'star-outline'; // Use a suitable icon
+          } else if (route.name === 'Achievement') {
+            iconName = focused ? 'achievement' : 'achievement-outline'; // Use a suitable icon
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;

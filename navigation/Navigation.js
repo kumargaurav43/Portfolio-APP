@@ -8,6 +8,7 @@ import ProjectsScreen from '../screens/ProjectsScreen';
 import SkillScreen from '../screens/SkillScreen';
 import ContactUsScreen from '../screens/ContactUsScreen';
 import TestimonialScreen from '../screens/TestimonialScreen';
+import AchievementsScreen from '../screens/AchievementsScreen';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +21,8 @@ const Navigation = () => {
         <Stack.Screen name="Projects" component={ProjectsScreen} />
         <Stack.Screen name="Skills" component={SkillScreen}/>
         <Stack.Screen name="Contact Us" component={ContactUsScreen} />
-        <Stack.Screen name="Testimonial" component={TestimonialScreen}>
+        <Stack.Screen name="Testimonial" component={TestimonialScreen}/>
+        <Stack.Screen name="Achievement" component={AchievementsScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
