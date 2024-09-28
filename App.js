@@ -12,6 +12,7 @@ import ContactUsScreen from './screens/ContactUsScreen';
 import { CustomDrawerContent } from './components/CustomDrawerContent';
 import TestimonialScreen from './screens/TestimonialScreen';
 import AchievementsScreen from './screens/AchievementsScreen';
+import BlogScreen from './screens/BlogScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -77,7 +78,10 @@ function DrawerNavigator() {
           } else if (route.name === 'Testimonial') {
             iconName = focused ? 'star' : 'star-outline'; // Use a suitable icon
           } else if (route.name === 'Achievement') {
-            iconName = focused ? 'achievement' : 'achievement-outline'; // Use a suitable icon
+            iconName = focused ? 'trophy' : 'trophy-outline'; // icon for "Achievement"
+          }
+          else if (route.name === 'Blog') {
+            iconName = focused ? 'newspaper' : 'newspaper-outline'; // Suitable icon for "Blog"
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -92,6 +96,8 @@ function DrawerNavigator() {
       <Drawer.Screen name="Skills" component={SkillScreen} />
       <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
       <Drawer.Screen name="Testimonial" component={TestimonialScreen}/>
+      <Drawer.Screen name="Achievement" component={AchievementsScreen}/>
+      <Stack.Screen name="Blog" component={BlogScreen}/>
     </Drawer.Navigator>
   );
 }
