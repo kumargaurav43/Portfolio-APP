@@ -81,7 +81,7 @@ function DrawerNavigator() {
             iconName = focused ? 'trophy' : 'trophy-outline'; // icon for "Achievement"
           }
           else if (route.name === 'Blog') {
-            iconName = focused ? 'newspaper' : 'newspaper-outline'; // Suitable icon for "Blog"
+            iconName = focused ? 'newspaper' : 'newspaper-outline'; // icon for "Blog"
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
