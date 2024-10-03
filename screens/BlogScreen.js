@@ -7,10 +7,11 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
+  Linking
 } from "react-native";
 
 const blogPosts = [
-  { title: "How I Built My Portfolio", link: "https://example.com/post1" },
+  { title: "How I Built My Portfolio", link: "https://medium.com/@gaurav746504/how-i-built-my-portfolio-a-developers-journey-3b3fd334e9b5" },
   { title: "Understanding React Hooks", link: "https://example.com/post2" },
   // Add more blog posts here
 ];
